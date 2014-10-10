@@ -1,0 +1,20 @@
+{
+  "name": "yoyogulpaglio",
+  "version": "1.0.0",
+  "description": "gulp aglio generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "aglio",
+    "blueprint",
+    "documentation"
+  ],
+  "author": "Albert Abril",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-aglio": "0.0.5"
+  }
+}
