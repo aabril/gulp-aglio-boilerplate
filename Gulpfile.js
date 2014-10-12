@@ -13,7 +13,7 @@ var server = {
         var app = express();
         app.use(require('connect-livereload')());
         app.use(express.static(this.basePath));
-        app.use('/', serveIndex(this.basePath,{'icons':true}));        
+        app.use('/', serveIndex(this.basePath,{'icons':true}));
         app.listen(this.port);
     },
     livereload: function() {
@@ -37,7 +37,11 @@ var server = {
 
 gulp.task('launch_server', function(){
   server.livestart();
+
+  gulp.watch('blueprints/*.md', ['compile_blueprints']);
+
   gulp.watch("public/*.html", function(event) {
+    //ToDo: launch compile_blueprints
     server.notify(event);
   });
 });
